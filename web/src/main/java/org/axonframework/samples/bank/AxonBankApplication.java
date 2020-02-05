@@ -18,7 +18,10 @@ package org.axonframework.samples.bank;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
+
+@ComponentScan({"org.axonframework.samples.bank.command","org.axonframework.samples.bank"})
 @SpringBootApplication
 public class AxonBankApplication {
 

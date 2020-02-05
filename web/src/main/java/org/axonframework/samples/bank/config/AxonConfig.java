@@ -28,6 +28,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
+
 
 @Configuration
 public class AxonConfig {
@@ -38,6 +40,7 @@ public class AxonConfig {
     private EventBus eventBus;
 
     @Bean
+
     public BankAccountCommandHandler bankAccountCommandHandler() {
         return new BankAccountCommandHandler(axonConfiguration.repository(BankAccount.class), eventBus);
     }
