@@ -1,0 +1,3 @@
+FROM mysql:5.7.15
+ENV MYSQL_ROOT_PASSWORD="root" \
+	MYSQL_DATABASE="axonbank"
